@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zygurek cierpienia</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript">
+        function odliczanie() {
+            var dzisiaj = new Date();
+
+            var dzien = dzisiaj.getDate();
+            var miesiac = dzisiaj.getMonth() + 1;
+            var rok = dzisiaj.getFullYear();
+            var milisekundy = dzisiaj.getTime();
+
+            var end = new Date("06/21/2024");
+            var endDzien = end.getDate();
+            var endMiesiac = end.getMonth() + 1;
+            var endRok = end.getFullYear();
+            var milisekundy2 = end.getTime();
+
+            var pozostalo = milisekundy2 - milisekundy;
+            var dni = Math.floor(pozostalo / 86400000);
+
+            var end2 = new Date("04/30/2028");
+            var endDzien2 = end2.getDate();
+            var endMiesiac2 = end2.getMonth();
+            var endRok2 = end2.getFullYear();
+            var milisekundy3 = end2.getTime();
+
+            var pozostalo2 = milisekundy3 - milisekundy;
+            var dni2 = Math.floor(pozostalo2 / 86400000);
+
+
+
+            document.getElementById("aktualnaData").innerHTML = "Aktualna data: " + dzien + "/" + miesiac + "/" + rok;
+            document.getElementById("dataWydarzenia").innerHTML = "Data do wakacji: " + endDzien + "/" + endMiesiac + "/" + endRok;
+            document.getElementById("dniDoWydarzenia").innerHTML = "Do wakacji pozostało: " + dni;
+            document.getElementById("dataWydarzenia2").innerHTML = "Data do końca chodzenia do szkoły: " + endDzien2 + "/" + endMiesiac2 + "/" + endRok2;
+            document.getElementById("dniDoWydarzenia2").innerHTML = "Do końca chodzenia do szkoły pozostało: " + dni2;
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="container"></div>
+    <div id="aktualnaData">Aktualna data: </div>
+    <br>
+    <div id="dataWydarzenia">Data do wakacji: </div>
+    <br>
+    <br>
+    <div id="dniDoWydarzenia">Do wakacji pozostało: </div>
+    <br>
+    <div id="dataWydarzenia2">Data do końca nauki w LO: </div>
+    <br>
+    <br>
+    <div id="dniDoWydarzenia2">Do końca nauki w LO pozostało: </div>
+    <script type="text/javascript"> odliczanie(); </script>
+    <div id="footer"> Nie pozdrawiam klas sportowych 😀 <koduj>
+    </div>
+
+</body>
+
+</html>
